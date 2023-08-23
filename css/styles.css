@@ -20,6 +20,7 @@
   --font-size-hero-heading: 56px;
   --font-size-section-heading: 36px;
   --font-size-item-heading: 20px;
+  --font-size-small: 12px;
 
   --font-weight-logo: 800;
   --font-weight-hero-heading: 700;
@@ -31,6 +32,7 @@
   --line-height-hero-heading: 1.07;
   --line-height-section-heading: 1.11;
   --line-height-item-heading: 1.2;
+  --line-height-subscribe-input: 2;
 
   --letter-spacing-text: 0.02em;
   --letter-spacing-logo: 0.03em;
@@ -42,6 +44,7 @@
   --text-transform-item-role: capitalize;
 
   --list-item-gap: 24px;
+  --footer-list-item-gap: 16px;
   --list-item-content-gap: 8px;
 
   --transition-general-duration: 250ms;
@@ -538,7 +541,6 @@ a {
 
 .footer-wrapper {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .footer-wrapper .footer-text {
@@ -566,9 +568,13 @@ a {
   color: var(--color-light);
 }
 
+.footer-wrapper > .footer-social-media {
+  margin-right: 80px;
+}
+
 .footer-social-list {
   display: flex;
-  gap: var(--list-item-gap);
+  gap: var(--footer-list-item-gap);
   margin-top: 16px;
 }
 
@@ -588,6 +594,51 @@ a {
 .link.footer-social-link:focus,
 .link.footer-social-link:active {
   background-color: var(--color-success);
+}
+
+.footer-wrapper > .subscribe-form > .subscribe-wrapper {
+  display: flex;
+  margin-top: 16px;
+  gap: 24px;
+}
+
+.subscribe-wrapper .subscribe-input {
+  width: 264px;
+  padding: 8px 16px;
+  margin-right: auto;
+  background-color: transparent;
+  border: 1px solid var(--color-white-background);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--color-white-background);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-subscribe-input);
+  letter-spacing: var(--letter-spacing-button);
+  font-family: var(--font-family-text);
+  outline: none;
+}
+
+.subscribe-wrapper .subscribe-input::placeholder {
+  color: var(--color-white-background);
+}
+
+.subscribe-wrapper .subscribe-btn {
+  display: flex;
+  padding: 8px 24px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-primary-brand);
+  color: var(--color-white-background);
+  --color-main: var(--color-white-background);
+  transition: background-color var(--transition-general);
+}
+
+.subscribe-wrapper .subscribe-btn:focus,
+.subscribe-wrapper .subscribe-btn:hover,
+.subscribe-wrapper .subscribe-btn:active {
+  background-color: var(--color-pressed-state);
 }
 
 .backdrop {
